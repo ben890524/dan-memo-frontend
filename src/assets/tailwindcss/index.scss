@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-// 全域css
-:root {
-}
+@import '../styles/index.scss';
 @layer components {
 }
 
