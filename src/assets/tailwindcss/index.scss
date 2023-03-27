@@ -6,4 +6,36 @@
 }
 
 @layer utilities {
+
+  .dark-mode-bg {
+    @apply duration-[250ms] bg-default-primary-color dark:bg-dark-primary-color;
+  }
+
+  .dark-mode-text {
+    @apply duration-[250ms] text-dark-primary-color dark:text-default-primary-color;
+  }
+
+  .boxify-image {
+    @apply relative;
+    padding: 66% 50%;
+  }
+
+  .square-boxify-image {
+    @apply relative p-[7.5%];
+    @apply xs:p-[2%];
+    @apply md:p-[2%];
+  }
+
+  .image-inside {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

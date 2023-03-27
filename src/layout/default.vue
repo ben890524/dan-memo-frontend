@@ -2,9 +2,7 @@
   <a-layout>
     <template v-if="!!$slots.header">
       <!-- is null not render -->
-      <a-layout-header class="bg-default-primary-color dark:bg-dark-primary-color px-0 lg:px-[10%]">
-        <slot name="header" />
-      </a-layout-header>
+      <slot name="header" />
     </template>
     <a-layout-content class="px-0 lg:px-[10%]">
       <template v-if="!!$slots.breadcrumb">
@@ -30,7 +28,5 @@
     </template>
   </a-layout>
 </template>
-<script setup lang="ts">
-// import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons-vue';
-</script>
+<script setup lang="ts"></script>
 <style scoped lang="scss"></style>

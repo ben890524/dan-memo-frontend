@@ -4,9 +4,9 @@
   --global-scrollbar-color: #66666666;
   --global-scrollbar-hover-color: #66666699;
   --global-default-primary-color: #ffffff;
-  --global-default-secondary-color: #001529;
+  --global-default-secondary-color: #f0f2f5;
   --global-dark-primary-color: #001529;
-  --global-dark-secondary-color: #ffffff;
+  --global-dark-secondary-color: #f0f2f5;
 }
 
 ::selection {
@@ -28,11 +28,12 @@
   background: var(--global-scrollbar-hover-color);
 }
 
-.dark {
+* {
   // font-family: 'Quicksand', 'Lato', Noto Sans TC, Noto Sans SC, 'Arial', 'Roboto', sans-serif;
-  animation: SlowlyEntry 0.25s ease-in-out;
+  animation: SlowlyEntry 0.2s ease-in-out;
   @apply duration-[250ms];
 }
+
 @keyframes SlowlyEntry {
   0% {
     opacity: 0;

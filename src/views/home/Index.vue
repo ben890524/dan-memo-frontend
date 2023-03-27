@@ -4,7 +4,7 @@
       <Header />
     </template>
     <template #breadcrumb>
-      <wrapper-breadcrumb />
+      <Breadcrumb />
     </template>
     <template #sider>
       123
@@ -20,7 +20,7 @@
 <script setup lang="ts">
 /** import component */
 import DefaultLayout from '@/layout/default.vue';
-import WrapperBreadcrumb from '@/components/antDesignWrapper/breadcrumb/Index.vue';
+import Breadcrumb from '@/components/global/breadcrumb/Index.vue';
 import Header from '@/components/global/header/Index.vue';
 </script>
 <style scoped lang="scss"></style>
