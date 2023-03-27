@@ -10,6 +10,11 @@ export default defineConfig(({ mode }: ConfigEnv) => {
       port: Number(env.VITE_APP_CONFIG_PORT),
       host: '0.0.0.0',
     },
+    define: {
+      __VUE_I18N_FULL_INSTALL__: true,
+      __VUE_I18N_LEGACY_API__: false,
+      __INTLIFY_PROD_DEVTOOLS__: false,
+    },
     resolve: {
       alias: {
         '@': resolve(__dirname, 'src'),
