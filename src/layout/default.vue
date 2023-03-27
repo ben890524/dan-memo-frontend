@@ -2,7 +2,7 @@
   <a-layout>
     <template v-if="!!$slots.header">
       <!-- is null not render -->
-      <a-layout-header class="bg-white px-0 lg:px-[10%]">
+      <a-layout-header class="bg-default-primary-color dark:bg-dark-primary-color px-0 lg:px-[10%]">
         <slot name="header" />
       </a-layout-header>
     </template>

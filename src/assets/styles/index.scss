@@ -1,3 +1,44 @@
 // 全域css
 :root {
+  --global-selection-color: #ade0f2;
+  --global-scrollbar-color: #66666666;
+  --global-scrollbar-hover-color: #66666699;
+  --global-default-primary-color: #ffffff;
+  --global-default-secondary-color: #001529;
+  --global-dark-primary-color: #001529;
+  --global-dark-secondary-color: #ffffff;
+}
+
+::selection {
+  background: var(--global-selection-color);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--global-scrollbar-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--global-scrollbar-hover-color);
+}
+
+.dark {
+  // font-family: 'Quicksand', 'Lato', Noto Sans TC, Noto Sans SC, 'Arial', 'Roboto', sans-serif;
+  animation: SlowlyEntry 0.25s ease-in-out;
+  @apply duration-[250ms];
+}
+@keyframes SlowlyEntry {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
