@@ -1,7 +1,7 @@
 <template>
   <section
     name="header"
-    class="bg-default-primary-color dark:bg-dark-primary-color mx-0 lg:mx-[10%]"
+    class="dark-mode-bg mx-0 lg:mx-[10%]"
   >
     <div class="flex items-center justify-between px-5 py-2.5">
       <template v-if="true">
@@ -49,14 +49,13 @@ import { reactive, computed } from 'vue';
 import { useDark, useToggle } from '@vueuse/core';
 import WrapperMenu from '@/components/antDesignWrapper/menu/Index.vue';
 import { IAntDesignButton } from '@/composables/useAntDesignVue/types';
-
+import { useI18n } from '@/composables/useI18n/index';
 interface IHeader {
   buttons: Array<IAntDesignButton>;
 }
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-
-const data_headerSchema = reactive({});
+// const data_headerSchema = reactive({});
 const data_header: IHeader = reactive({
   buttons: [
     {
@@ -66,7 +65,11 @@ const data_header: IHeader = reactive({
         disabled: false,
         loading: false,
         type: 'text',
-        title: computed(() => (isDark.value ? '開啟黑暗模式' : '關閉黑暗模式')),
+        title: computed(() =>
+          isDark.value
+            ? `${useI18n('ENABLE')} ${useI18n('DARK_MODE')}`
+            : `${useI18n('DISABLE')} ${useI18n('DARK_MODE')}`
+        ),
       },
       listeners: {
         click: () => {
@@ -85,7 +88,9 @@ const data_header: IHeader = reactive({
         title: '前往GitHub~',
       },
       listeners: {
-        click: () => {},
+        click: () => {
+          window.location.href = 'https://github.com/ben890524/danmemo-chara-list';
+        },
         focus: () => {},
       },
     },
