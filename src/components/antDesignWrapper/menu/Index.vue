@@ -18,28 +18,28 @@
     >
       <a-menu-item key="1">
         <router-link
-          class="px-5 dark-mode-text font-bold text-[13px]"
+          class="px-5 font-bold text-[13px]"
           to="/"
         >
-          首頁
+          <span class="dark-mode-text">首頁</span>
         </router-link>
       </a-menu-item>
 
       <a-menu-item key="2">
         <router-link
-          class="px-5 dark-mode-text font-bold text-[13px]"
+          class="px-5 font-bold text-[13px]"
           to="/"
         >
-          角色清單
+          <span class="dark-mode-text">角色清單</span>
         </router-link>
       </a-menu-item>
 
       <a-menu-item key="3">
         <router-link
-          class="px-5 dark-mode-text font-bold text-[13px]"
+          class="px-5 font-bold text-[13px]"
           to="/"
         >
-          角色篩選
+          <span class="dark-mode-text">角色篩選</span>
         </router-link>
       </a-menu-item>
     </a-menu>

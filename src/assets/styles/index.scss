@@ -31,7 +31,7 @@
 * {
   // font-family: 'Quicksand', 'Lato', Noto Sans TC, Noto Sans SC, 'Arial', 'Roboto', sans-serif;
   animation: SlowlyEntry 0.2s ease-in-out;
-  @apply duration-[250ms];
+  @apply duration-[200ms];
 }
 
 @keyframes SlowlyEntry {

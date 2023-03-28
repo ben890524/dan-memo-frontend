@@ -8,11 +8,11 @@
 @layer utilities {
 
   .dark-mode-bg {
-    @apply duration-[250ms] bg-default-primary-color dark:bg-dark-primary-color;
+    @apply duration-[200ms] bg-default-primary-color dark:bg-dark-primary-color;
   }
 
   .dark-mode-text {
-    @apply duration-[250ms] text-dark-primary-color dark:text-default-primary-color;
+    @apply duration-[200ms] text-dark-primary-color dark:text-default-primary-color;
   }
 
   .boxify-image {
