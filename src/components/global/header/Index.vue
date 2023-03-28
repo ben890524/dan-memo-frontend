@@ -19,6 +19,7 @@
         <a-button
           v-for="button in data_header.buttons"
           :key="button.name"
+          class="dark-mode-text"
           v-bind="{
             ...button.attrs,
           }"
@@ -28,33 +29,15 @@
         >
           <template #icon>
             <component
-              :is="'GithubOutlined'"
+              :is="`${button.icon}Filled`"
               v-if="isDark"
+            />
+            <component
+              :is="`${button.icon}Outlined`"
+              v-else
             />
           </template>
         </a-button>
-        <!-- <button
-          title="123132"
-          class="flex items-center outline-none dark-mode-text mr-2.5 text-base"
-          alt="131313"
-          @click="toggleDark()"
-        >
-          <bulb-outlined v-if="isDark" />
-          <bulb-filled v-else />
-        </button>
-
-        <a-button
-          type="primary"
-          shape="circle"
-        >
-          <template #icon>
-            <github-outlined />
-          </template>
-        </a-button> -->
-        <!-- <button class="flex items-center text-base outline-none dark-mode-text" @click="toggleDark()">
-          <github-outlined v-if="isDark" />
-          <github-filled v-else />
-        </button> -->
       </div>
     </div>
     <wrapper-menu />
@@ -62,8 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue';
-// import { BulbOutlined, BulbFilled, GithubOutlined, GithubFilled } from '@ant-design/icons-vue';
+import { reactive, computed } from 'vue';
 import { useDark, useToggle } from '@vueuse/core';
 import WrapperMenu from '@/components/antDesignWrapper/menu/Index.vue';
 import { IAntDesignButton } from '@/composables/useAntDesignVue/types';
@@ -84,10 +66,12 @@ const data_header: IHeader = reactive({
         disabled: false,
         loading: false,
         type: 'text',
-        title: isDark.value ? '開啟黑暗模式' : '關閉黑暗模式',
+        title: computed(() => (isDark.value ? '開啟黑暗模式' : '關閉黑暗模式')),
       },
       listeners: {
-        click: () => {},
+        click: () => {
+          toggleDark();
+        },
         focus: () => {},
       },
     },

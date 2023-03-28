@@ -3,7 +3,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import 'ant-design-vue/dist/antd.css';
 import '@/assets/tailwindcss/index.scss';
-import { setupAntdIcon } from '@/composables/useAntDesignVue/aIcon';
+import { setupAntdIcon } from '@/composables/useAntDesignVue/AntDIcon/index';
 import { i18n } from '@/composables/useI18n';
 import router from './router';
 import store from './store';
