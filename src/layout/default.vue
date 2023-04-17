@@ -9,7 +9,10 @@
         <slot name="breadcrumb" />
       </template>
       <!-- is null not render -->
-      <a-layout style="padding: 24px 0; background: #fff">
+      <a-layout
+        style="padding: 24px 0;"
+        class="dark-mode-text dark-mode-bg"
+      >
         <template v-if="!!$slots.sider">
           <slot name="sider" />
         </template>

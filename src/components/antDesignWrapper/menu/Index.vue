@@ -51,7 +51,7 @@ const data_headerMenu: IHeaderMenu = reactive({
     attrs: {
       theme: computed(() => (isDark.value ? 'dark' : 'light')),
       mode: 'horizontal',
-      class: 'bg-transparent',
+      class: 'dark-mode-bg',
     },
     listeners: {
       click: () => {},
