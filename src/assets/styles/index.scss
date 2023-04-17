@@ -6,7 +6,7 @@
   --global-default-primary-color: #ffffff;
   --global-default-secondary-color: #f0f2f5;
   --global-dark-primary-color: #001529;
-  --global-dark-secondary-color: #f0f2f5;
+  --global-dark-secondary-color: #2a3441;
 }
 
 ::selection {
@@ -32,6 +32,10 @@
   // font-family: 'Quicksand', 'Lato', Noto Sans TC, Noto Sans SC, 'Arial', 'Roboto', sans-serif;
   animation: SlowlyEntry 0.2s ease-in-out;
   @apply duration-[200ms];
+}
+
+body {
+  @apply dark-mode-secondary-bg;
 }
 
 @keyframes SlowlyEntry {

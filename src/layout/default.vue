@@ -1,5 +1,5 @@
 <template>
-  <a-layout>
+  <a-layout class="dark-mode-secondary-bg">
     <template v-if="!!$slots.header">
       <!-- is null not render -->
       <slot name="header" />
@@ -22,7 +22,10 @@
     </a-layout-content>
     <template v-if="!!$slots.footer">
       <!-- is null not render -->
-      <a-layout-footer style="text-align: center">
+      <a-layout-footer
+        style="text-align: center"
+        class="dark-mode-secondary-bg"
+      >
         <slot name="footer" />
       </a-layout-footer>
     </template>

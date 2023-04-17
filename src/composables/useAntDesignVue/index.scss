@@ -1,0 +1,4 @@
+.ant-breadcrumb > span:last-child,
+.ant-breadcrumb-separator {
+  @apply dark-mode-text font-bold;
+}

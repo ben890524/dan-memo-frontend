@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 @import '../styles/index.scss';
+@import '../../composables//useAntDesignVue/index.scss';
+
 @layer components {
 }
 
 @layer utilities {
-
   .dark-mode-bg {
     @apply duration-[200ms] bg-default-primary-color dark:bg-dark-primary-color;
+  }
+
+  .dark-mode-secondary-bg {
+    @apply duration-[200ms] bg-default-secondary-color dark:bg-dark-secondary-color;
   }
 
   .dark-mode-text {

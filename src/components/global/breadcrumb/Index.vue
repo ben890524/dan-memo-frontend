@@ -1,5 +1,5 @@
 <template>
-  <div class="my-2.5">
+  <div class="px-2.5 my-2.5">
     <wrapper-breadcrumb />
   </div>
 </template>
